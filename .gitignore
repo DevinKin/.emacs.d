@@ -58,3 +58,5 @@ site-lisp/package/
 /rime
 *recentf
 custom.el
+eaf
+.gitmodules

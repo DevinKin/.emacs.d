@@ -4,8 +4,6 @@
   :hook (after-init-hook . global-company-mode)
   :bind
   (:map company-mode-map
-	("<tab>" . 'user/insert-tab)
-
 	:map company-active-map
 	("C-n" . 'company-select-next)
 	("C-p" . 'company-select-previous)
