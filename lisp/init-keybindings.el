@@ -12,5 +12,7 @@
 (global-set-key (kbd "C-M-\\") 'indent-region-or-buffer)
 ;; open init-file
 (global-set-key (kbd "<f2>") 'open-init-file)
+;; helm-buffer-list
+(global-set-key (kbd "C-x b") 'helm-buffers-list)
 
 (provide 'init-keybindings)

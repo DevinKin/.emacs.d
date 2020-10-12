@@ -60,15 +60,10 @@
 (use-package eaf
   :load-path "~/.emacs.d/site-lisp/emacs-application-framework" 
   :defer 1
-  :bind (("C-' C-w l" . eaf-open-browser)
-	 (:map eaf-mode-map
-	  ("C-b" . eaf-proxy-search_text_backward)))
   :config
+  (require 'eaf-evil)
   (eaf-setq eaf-browser-remember-history "true")
   (eaf-setq eaf-browser-default-zoom "1.0")
-  (eaf-bind-key scroll_up "C-n" eaf-pdf-viewer-keybinding)
-  (eaf-bind-key scroll_down "C-p" eaf-pdf-viewer-keybinding)
-  (eaf-bind-key take_photo "p" eaf-camera-keybinding)
   )
 
 (provide 'init-tools)

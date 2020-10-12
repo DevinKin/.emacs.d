@@ -26,6 +26,9 @@
     "sa" 'mark-whole-buffer
     "fj" 'dired-jump
     "ps" 'helm-do-ag-project-root
+    "eoo" 'eaf-open
+    "eob" 'eaf-open-browser
+    "eot" 'eaf-open-terminal
     ))
 
 (use-package evil-surround
