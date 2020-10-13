@@ -21,6 +21,8 @@
 (require 'init-smartparens)
 ;;; company configuration
 (require 'init-company)
+;;; Clojure configuration
+(require 'init-clojure)
 ;;; keybindings
 (require 'init-keybindings)
 

@@ -7,7 +7,8 @@
 	:map company-active-map
 	("C-n" . 'company-select-next)
 	("C-p" . 'company-select-previous)
-	("<escape>" . 'company-abort))
+	("<escape>" . 'company-abort)
+	("C-<tab>" . 'company-complete-common-or-cycle))
 
   :config
   (setq company-idle-delay 0.2
