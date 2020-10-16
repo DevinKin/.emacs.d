@@ -23,6 +23,16 @@
 (require 'init-company)
 ;;; Clojure configuration
 (require 'init-clojure)
+;;; rime configuration
+(require 'init-rime)
+;;; dired configuration
+(require 'init-dired)
+;;; yasnippet configuration
+(require 'init-snippet)
+;;; eshell configuration
+(require 'init-eshell)
+;;; org configuration
+(require 'init-org)
 ;;; keybindings
 (require 'init-keybindings)
 
