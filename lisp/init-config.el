@@ -33,6 +33,12 @@
 (require 'init-eshell)
 ;;; org configuration
 (require 'init-org)
+;;; lsp configuration
+(require 'init-lsp)
+;;; lisp configuration
+(require 'init-lisp)
+;;; lisp configuration
+(require 'init-python)
 ;;; keybindings
 (require 'init-keybindings)
 
