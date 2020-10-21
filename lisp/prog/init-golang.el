@@ -8,7 +8,10 @@
          )
   :hook ((go-mode . lsp-deferred)
          (before-save-hook . lsp-format-buffer)
-         (before-save-hook . lsp-organize-imports))
+         (before-save-hook . lsp-organize-imports)
+	 (go-mode-hook . (lambda ()
+			   (require 'dap-go)
+			   (dap-go-setup))))
   :config
   (add-to-list 'lsp-enabled-clients 'gopls)
   (add-hook 'go-mode-hook

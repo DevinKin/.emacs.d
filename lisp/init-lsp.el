@@ -33,5 +33,14 @@
   ;; Documents
   (setq lsp-ui-doc-enable t))
 
+(use-package dap-mode
+  :ensure t
+  :hook
+  (lsp-mode . dap-mode)
+  (lsp-mode . dap-ui-mode)
+  :config
+  (setq dap-print-io t) 
+  )
+
 
 (provide 'init-lsp)
