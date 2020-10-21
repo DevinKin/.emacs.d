@@ -60,3 +60,4 @@ site-lisp/package/
 custom.el
 eaf
 *.lsp
+.lsp.*
