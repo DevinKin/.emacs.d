@@ -29,4 +29,9 @@
   (push 'company-capf company-backends)
   )
 
+(use-package company-lsp
+  :ensure t
+  :commands company-lsp
+  :config (push 'company-lsp company-backends)) ;; add company-lsp as a backend
+
 (provide 'init-company)

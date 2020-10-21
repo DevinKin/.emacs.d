@@ -1,45 +1,49 @@
-;;; Packages Settings
+;; Packages Settings
 (require 'init-packages)
 
-;;; custom functions
+;; custom functions
 (require 'init-functions)
-;;; ui configuration
+;; ui configuration
 (require 'init-ui)
-;;; default configuration
+;; default configuration
 (require 'init-default)
-;;; helm configuration
+;; helm configuration
 (require 'init-helm)
-;;; ivy configuration
+;; ivy configuration
 (require 'init-ivy)
-;;; evil keybindings and configuration
+;; evil keybindings and configuration
 (require 'init-evil)
-;;; linum configuration
+;; linum configuration
 (require 'init-linum)
-;;; some tools
+;; some tools
 (require 'init-tools)
-;;; smartparens configuration
+;; smartparens configuration
 (require 'init-smartparens)
-;;; company configuration
+;; company configuration
 (require 'init-company)
-;;; Clojure configuration
+;; Clojure configuration
 (require 'init-clojure)
-;;; rime configuration
+;; rime configuration
 (require 'init-rime)
-;;; dired configuration
+;; dired configuration
 (require 'init-dired)
-;;; yasnippet configuration
+;; yasnippet configuration
 (require 'init-snippet)
-;;; eshell configuration
+;; eshell configuration
 (require 'init-eshell)
-;;; org configuration
+;; org configuration
 (require 'init-org)
-;;; lsp configuration
+;; lsp configuration
 (require 'init-lsp)
-;;; lisp configuration
+;; lisp configuration
 (require 'init-lisp)
-;;; lisp configuration
+;; python configuration
 (require 'init-python)
-;;; keybindings
+;; c-c++ configuration
+(require 'init-c-c++)
+;; golang configuration
+(require 'init-golang)
+;; keybindings
 (require 'init-keybindings)
 
 (provide 'init-config)

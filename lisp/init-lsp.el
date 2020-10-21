@@ -1,12 +1,14 @@
 (use-package lsp-mode
   :ensure t
+  :commands (lsp-deferred lsp)
   :defer t
   :init (setq lsp-keymap-prefix "C-c l")
   :hook ((lsp-mode . lsp-enable-which-key-integration)
 	 ((c-mode-hook c++-mode-hook
 		       lisp-mode-hook js-mode-hook
 		       web-mode-hook
-		       python-mode-hook) . lsp))
+		       python-mode-hook
+		       go-mode-hook) . lsp))
   :config
   (setq lsp-idle-delay 1200
         lsp-auto-guess-root nil
@@ -30,5 +32,6 @@
   (define-key lsp-ui-mode-map [remap xref-find-references] #'lsp-ui-peek-find-references)
   ;; Documents
   (setq lsp-ui-doc-enable t))
+
 
 (provide 'init-lsp)

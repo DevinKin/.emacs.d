@@ -58,4 +58,10 @@
   :hook (org-mode-hook . (lambda () (org-bullets-mode t)))
   :custom (org-bullets-bullet-list '("☰" "☷" "✿" "☭")))
 
+
+;;; Org hugo blog
+(use-package ox-hugo
+  :ensure t
+  :after ox)
+
 (provide 'init-org)
