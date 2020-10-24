@@ -62,3 +62,5 @@ eaf
 *.lsp
 .lsp-*
 /.dap*
+/bookmarks
+org-roam.db

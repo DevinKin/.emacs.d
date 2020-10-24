@@ -3,6 +3,7 @@
   :bind (("M-x" . helm-M-x))
   :config
   (setq helm-display-buffer-default-height 20)
+  (setq helm-inherit-input-method nil)
   )
 
 (use-package helm-ag
