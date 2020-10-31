@@ -2,14 +2,15 @@
   :ensure t
   :commands (org-mode)
   :bind
-  ("C-<tab>" . org-cycle)
+  (("C-<tab>" . org-cycle)
+   ("C-M-<return>" . org-meta-return))
   :config
   (eval-after-load "org"
     '(require 'ox-gfm nil t))
 
   (setq org-src-fontify-natively t
-      org-src-fontify-natively t
-      org-src-tab-acts-natively t) ; Highlight code in babel and not ask
+	org-src-fontify-natively t
+	org-src-tab-acts-natively t) ; Highlight code in babel and not ask
 
   ;; org agenda
 
@@ -65,12 +66,12 @@
   :after ox)
 
 (use-package org-roam
-      :ensure t
-      :hook
-      (after-init . org-roam-mode)
-      :custom
-      (org-roam-directory "/home/devinkin/org-roam/")
-      :bind (:map org-roam-mode-map
+  :ensure t
+  :hook
+  (after-init . org-roam-mode)
+  :custom
+  (org-roam-directory "/home/devinkin/org-roam/")
+  :bind (:map org-roam-mode-map
               (("C-c n l" . org-roam)
                ("C-c n f" . org-roam-find-file)
                ("C-c n g" . org-roam-graph))

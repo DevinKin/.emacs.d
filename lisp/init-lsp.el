@@ -8,16 +8,29 @@
 		       lisp-mode-hook js-mode-hook
 		       web-mode-hook
 		       python-mode-hook
-		       go-mode-hook) . lsp))
+		       go-mode-hook) . lsp)
+	 ((clojure-mode-hook
+	   clojurec-mode-hook
+	   clojurescript-mode-hook) . lsp)
+	 )
   :config
+  (dolist (m '(clojure-mode
+               clojurec-mode
+               clojurescript-mode
+               clojurex-mode))
+    (add-to-list 'lsp-language-id-configuration `(,m . "clojure")))
+
   (setq lsp-idle-delay 1200
-        lsp-auto-guess-root nil
-        lsp-file-watch-threshold 2000
-        lsp-eldoc-hook nil
-        lsp-log-io nil
-        lsp-enable-folding nil
-        lsp-enable-snippet nil
-        lsp-prefer-flymake :none))
+	lsp-auto-guess-root nil
+	lsp-file-watch-threshold 2000
+	lsp-eldoc-hook nil
+	lsp-log-io nil
+	lsp-enable-folding nil
+	lsp-enable-snippet nil
+	lsp-prefer-flymake :none
+	
+	lsp-clojure-custom-server-command '("bash" "-c" "clojure-lsp") ;; Optional: In case `clojure-lsp` is not in your PATH
+	lsp-enable-indentation nil))
 
 (use-package lsp-ui
   :ensure t
