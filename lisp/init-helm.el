@@ -14,6 +14,7 @@
   :bind (("C-s" . swiper)))
 
 (use-package projectile
+  :ensure t
   :bind
   (:map
    projectile-mode-map
