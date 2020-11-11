@@ -19,12 +19,13 @@
                           "?\\)\\(/\\)\\("
                           clojure--sym-regexp
                           "\\)")
-                 (0 'clojure-keyword-face))))
+                 (0 'clojure-keyword-face)))
+  )
 
 
 (use-package clj-refactor
   :ensure t
-  :hook (clojure-mode . clj-refactor-mode)
+  :hook (clojure-mode-hook . clj-refactor-mode)
   :bind
   (:map
    clojure-mode-map
@@ -54,7 +55,7 @@
    ("<backspace>" . 'paredit-backward-delete))
 
   :init
-  ;(add-hook 'cider--debug-mode-hook 'user/insert-mode)
+					;(add-hook 'cider--debug-mode-hook 'user/insert-mode)
   (add-hook 'cider-repl-mode-hook 'smartparens-mode)
   (setq cider-font-lock-dynamically t
 	cider-font-lock-reader-conditionals t
@@ -67,6 +68,13 @@
   :config
   (unbind-key "M-." cider-mode-map)
   )
+
+(use-package sayid
+  :ensure t
+  :defer t
+  :config
+  (eval-after-load 'clojure-mode
+    '(sayid-setup-package)))
 
 
 (use-package flycheck
