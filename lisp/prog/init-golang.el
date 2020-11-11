@@ -13,7 +13,7 @@
 			   (require 'dap-go)
 			   (dap-go-setup))))
   :config
-  (add-to-list 'lsp-enabled-clients 'gopls)
+  ;; (add-to-list 'lsp-enabled-clients 'gopls)
   (add-hook 'go-mode-hook
 	    (lambda ()
 	      (setq tab-width 4))))

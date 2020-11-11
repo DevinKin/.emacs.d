@@ -21,8 +21,6 @@
 (require 'init-smartparens)
 ;; company configuration
 (require 'init-company)
-;; Clojure configuration
-(require 'init-clojure)
 ;; rime configuration
 (require 'init-rime)
 ;; dired configuration
@@ -37,6 +35,8 @@
 (require 'init-lsp)
 ;; lisp configuration
 (require 'init-lisp)
+;; Clojure configuration
+(require 'init-clojure)
 ;; python configuration
 (require 'init-python)
 ;; c-c++ configuration
