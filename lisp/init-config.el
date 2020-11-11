@@ -45,5 +45,7 @@
 (require 'init-golang)
 ;; keybindings
 (require 'init-keybindings)
+;; visual-move by dog emacs
+(require 'visual-move)
 
 (provide 'init-config)

@@ -34,9 +34,12 @@
   (let (ovs)
     (save-mark-and-excursion
       (cl-loop for i from 1 to 9 do
+	       (call-interactively cmd)
 	       (let ((ov (make-overlay (point) (1+ (point)))))
-		 (call-interactively cmd)
-		 (overlay-put ov 'display (format "%d" i))
+		 (overlay-put ov 'display
+			      (cond ((looking-at-p "\n")
+				     (format "%d\n" i))
+				    (t (format "%d" i))))
 		 (overlay-put ov 'face 'position-hint-face)
 		 (push ov ovs))))
     (sit-for 1)
@@ -44,10 +47,19 @@
     (setq position-hint-move-function cmd)
     (set-transient-map position-hint-map t (lambda () (setq position-hint-move-function nil)))))
 
-(defun my-forword-word ()
+(defun my-forward-word ()
   (interactive)
   (call-interactively #'forward-word)
   (hightlight-position-hint #'forward-word))
 
+(defun my-backward-word ()
+  (interactive)
+  (call-interactively #'backward-word)
+  (hightlight-position-hint #'backward-word))
 
-(define-key global-map (kbd "<f9>") #'my-forword-word)
+
+;; (define-key global-map (kbd "<f9>") #'my-forward-word)
+(define-key global-map [remap forward-word] #'my-forward-word)
+(define-key global-map [remap backward-word] #'my-backward-word)
+
+(provide 'visual-move)
