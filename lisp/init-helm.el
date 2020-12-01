@@ -23,4 +23,13 @@
   (projectile-global-mode 1)
   )
 
+(use-package helm-tramp
+  :ensure t
+  :bind (("C-c s" . helm-tramp))
+  :config
+  (progn
+    (setq tramp-default-method "ssh")
+    (setq make-backup-files nil)
+    (setq create-lockfiles nil)))
+
 (provide 'init-helm)

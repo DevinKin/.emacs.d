@@ -66,4 +66,9 @@
   (eaf-setq eaf-browser-default-zoom "1.0")
   )
 
+
+;;; fish-mode for edit fish shell script
+(use-package fish-mode
+  :ensure t)
+
 (provide 'init-tools)

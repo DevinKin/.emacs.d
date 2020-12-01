@@ -47,5 +47,7 @@
 (require 'init-keybindings)
 ;; visual-move by dog emacs
 (require 'visual-move)
+;; docker and dockerfile configuration
+(require 'init-docker)
 
 (provide 'init-config)

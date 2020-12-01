@@ -2,6 +2,9 @@
 (use-package lispy
   :ensure t
   :defer 1
-  :hook ((lisp-mode-hook emacs-lisp-mode-hook clojure-mode-hook lisp-interaction-mode-hook) . lispy-mode))
+  :hook ((lisp-mode-hook emacs-lisp-mode-hook
+			 cider-repl-mode-hook
+			 clojure-mode-hook
+			 lisp-interaction-mode-hook) . lispy-mode))
 
 (provide 'init-lisp)
