@@ -61,7 +61,7 @@
 	cider-font-lock-reader-conditionals t
 	cider-prompt-for-symbol nil
 	cider-enhanced-cljs-completion-p nil
-	
+
 	)
   (setq-default cider-default-cljs-repl 'shadow)
 

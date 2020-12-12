@@ -3,7 +3,7 @@
   :commands (lsp-deferred lsp)
   :defer t
   :init (setq lsp-keymap-prefix "C-c l")
-  :hook ((lsp-mode . lsp-enable-which-key-integration)
+  :hook ((lsp-mode-hook . lsp-enable-which-key-integration)
 	 ((c-mode-hook c++-mode-hook
 		       lisp-mode-hook js-mode-hook
 		       web-mode-hook
