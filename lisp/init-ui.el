@@ -110,4 +110,7 @@
   :defer 1
   :hook (prog-mode-hook . page-break-lines-mode))
 
+(custom-set-faces '(hl-line ((t :underline t
+				:extend t))))
+
 (provide 'init-ui)
