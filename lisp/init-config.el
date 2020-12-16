@@ -49,5 +49,7 @@
 (require 'visual-move)
 ;; docker and dockerfile configuration
 (require 'init-docker)
+;; yaml-mode
+(require 'init-yaml)
 
 (provide 'init-config)
