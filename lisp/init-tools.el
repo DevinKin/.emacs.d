@@ -71,4 +71,9 @@
 (use-package fish-mode
   :ensure t)
 
+;;; undo-tree package
+(use-package undo-tree
+  :ensure t
+  :config (global-undo-tree-mode))
+
 (provide 'init-tools)
