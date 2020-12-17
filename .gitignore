@@ -65,3 +65,4 @@ eaf
 /bookmarks
 org-roam.db
 site-lisp/*
+.clj*
