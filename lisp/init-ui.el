@@ -14,11 +14,12 @@
 ;; disable cursor blink
 (blink-cursor-mode 0)
 ;; emacs alpha 90
-(set-frame-parameter (selected-frame) 'alpha 90)
+;; (set-frame-parameter (selected-frame) 'alpha 90)
+
 ;; font configuration
 (setq devinkin/font-name "Source Code Pro"
       devinkin/font-style "Regular"
-      devinkin/font-size 16)
+      devinkin/font-size 18)
 (if (fontp (font-spec
             :name devinkin/font-name
             :style devinkin/font-style
@@ -110,7 +111,11 @@
   :defer 1
   :hook (prog-mode-hook . page-break-lines-mode))
 
-(custom-set-faces '(hl-line ((t :underline t
-				:extend t))))
+(custom-set-faces '(hl-line ((t
+			      :extend t
+			      :underline "#65EAB9")))
+		  '(magit-section-highlight ((t
+			      :underline nil)))
+		  )
 
 (provide 'init-ui)

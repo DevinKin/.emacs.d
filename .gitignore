@@ -64,3 +64,4 @@ eaf
 /.dap*
 /bookmarks
 org-roam.db
+site-lisp/*
