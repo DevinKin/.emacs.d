@@ -22,6 +22,7 @@
     "ud" 'undo-tree-visualize
     "oa" 'org-agenda
     "mgs" 'magit-status
+    "mgb" 'magit-blame
     "llh" 'slime-hyperspec-lookup
     "sa" 'mark-whole-buffer
     "fj" 'dired-jump
