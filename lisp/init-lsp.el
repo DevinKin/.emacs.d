@@ -29,6 +29,7 @@
 	lsp-enable-folding nil
 	lsp-enable-snippet nil
 	lsp-prefer-flymake :none
+	lsp-diagnostics-provider :none
 	
 	lsp-clojure-custom-server-command '("bash" "-c" "clojure-lsp") ;; Optional: In case `clojure-lsp` is not in your PATH
 	lsp-enable-indentation nil))

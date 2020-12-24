@@ -77,22 +77,23 @@
     '(sayid-setup-package)))
 
 
-(use-package flycheck
-  :ensure t)
+;; (use-package flycheck
+;;   :ensure t)
 
-(use-package flycheck-clojure
-  :defer t
-  ;; autoload
-  :commands (flycheck-clojure-setup)
-  :config
-  (eval-after-load 'flycheck
-    '(setq flycheck-display-errors-function #'flycheck-pos-tip-error-messages))
-  (add-hook 'after-init-hook #'global-flycheck-mode))
+;; (use-package flycheck-clojure
+;;   :defer t
+;;   ;; autoload
+;;   :commands (flycheck-clojure-setup)
+;;   :config
+;;   (eval-after-load 'flycheck
+;;     '(setq flycheck-display-errors-function #'flycheck-pos-tip-error-messages))
+;;   ;; (add-hook 'after-init-hook #'global-flycheck-mode)
+;;   )
 
 
-(use-package flycheck-pos-tip
-  :ensure t
-  :after flycheck)
+;; (use-package flycheck-pos-tip
+;;   :ensure t
+;;   :after flycheck)
 
 
 ;;; Clojure comment functions

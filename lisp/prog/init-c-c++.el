@@ -50,22 +50,22 @@
 (add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
 
 ;; flycheck
-(use-package flycheck
-  :ensure t
-  :demand t
-  :hook ((c++-mode-hook c-mode-hook) . flycheck-mode)
-  :config
-  (setq flycheck-mode-line-prefix "FC"))
-(use-package flycheck-irony
-  :ensure t
-  :defer t
-  :init (progn
-	  (add-hook 'flycheck-mode-hook #'flycheck-irony-setup)
-	  ))
-(add-hook 'c++-mode-hook (lambda ()
-			   (setq flycheck-clang-language-standard "c++11")
-			   (setq irony-additional-clang-options '("-std=c++11"))
-			   ))
+;; (use-package flycheck
+;;   :ensure t
+;;   :demand t
+;;   :hook ((c++-mode-hook c-mode-hook) . flycheck-mode)
+;;   :config
+;;   (setq flycheck-mode-line-prefix "FC"))
+;; (use-package flycheck-irony
+;;   :ensure t
+;;   :defer t
+;;   :init (progn
+;; 	  (add-hook 'flycheck-mode-hook #'flycheck-irony-setup)
+;; 	  ))
+;; (add-hook 'c++-mode-hook (lambda ()
+;; 			   (setq flycheck-clang-language-standard "c++11")
+;; 			   (setq irony-additional-clang-options '("-std=c++11"))
+;; 			   ))
 
 ;;; C/C++ headers completion
 (use-package company-c-headers
