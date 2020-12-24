@@ -51,5 +51,9 @@
 (require 'init-docker)
 ;; yaml-mode
 (require 'init-yaml)
+;; csv-mode
+(require 'init-csv)
+;; web-mode
+(require 'init-web)
 
 (provide 'init-config)
