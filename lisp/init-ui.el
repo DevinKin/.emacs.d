@@ -97,7 +97,8 @@
 (use-package indent-guide
   :ensure t
   :defer 1
-  :hook (after-init-hook . indent-guide-global-mode))
+  ;; :hook (after-init-hook . indent-guide-global-mode)
+  )
 
 ;;; Info Colors
 (use-package info-colors
@@ -113,9 +114,11 @@
 
 (custom-set-faces '(hl-line ((t
 			      :extend t
+			      :background "#13151a"
 			      :underline "#65EAB9")))
 		  '(magit-section-highlight ((t
 			      :underline nil)))
-		  )
+		  '(ediff-even-diff-A ((t
+					:underline nil))))
 
 (provide 'init-ui)

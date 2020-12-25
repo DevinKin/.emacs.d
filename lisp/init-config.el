@@ -51,5 +51,7 @@
 (require 'init-docker)
 ;; yaml-mode
 (require 'init-yaml)
+;; json-mode
+(require 'init-json)
 
 (provide 'init-config)
