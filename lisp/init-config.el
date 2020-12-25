@@ -53,5 +53,9 @@
 (require 'init-yaml)
 ;; json-mode
 (require 'init-json)
+;; csv-mode
+(require 'init-csv)
+;; web-mode
+(require 'init-web)
 
 (provide 'init-config)

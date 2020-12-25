@@ -5,7 +5,8 @@
   :init (setq lsp-keymap-prefix "C-c l")
   :hook ((lsp-mode-hook . lsp-enable-which-key-integration)
 	 ((c-mode-hook c++-mode-hook
-		       lisp-mode-hook js-mode-hook
+		       lisp-mode-hook
+		       js-mode-hook
 		       web-mode-hook
 		       python-mode-hook
 		       go-mode-hook) . lsp)
@@ -28,6 +29,7 @@
 	lsp-enable-folding nil
 	lsp-enable-snippet nil
 	lsp-prefer-flymake :none
+	lsp-diagnostics-provider :none
 	
 	lsp-clojure-custom-server-command '("bash" "-c" "clojure-lsp") ;; Optional: In case `clojure-lsp` is not in your PATH
 	lsp-enable-indentation nil))

@@ -66,3 +66,4 @@ eaf
 org-roam.db
 site-lisp/*
 .clj*
+/.extension
