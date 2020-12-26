@@ -94,11 +94,11 @@
 
 
 ;;; Indent Guide
-(use-package indent-guide
-  :ensure t
-  :defer 1
-  ;; :hook (after-init-hook . indent-guide-global-mode)
-  )
+;; (use-package indent-guide
+;;   :ensure t
+;;   :defer 1
+;;   ;; :hook (after-init-hook . indent-guide-global-mode)
+;;   )
 
 ;;; Info Colors
 (use-package info-colors

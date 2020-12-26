@@ -11,7 +11,7 @@
 	("C-<tab>" . 'company-complete-common-or-cycle))
 
   :config
-  (setq company-idle-delay 0.2
+  (setq company-idle-delay 0
         ;; Some languages use camel case naming convention,
         ;; so company should be case sensitive.
 	company-dabbrev-downcase nil
@@ -33,5 +33,11 @@
   :ensure t
   :commands company-lsp
   :config (push 'company-lsp company-backends)) ;; add company-lsp as a backend
+
+;; company-tabnine with ai complete
+(use-package company-tabnine
+  :ensure t
+  :config
+  (add-to-list 'company-backends #'company-tabnine))
 
 (provide 'init-company)
