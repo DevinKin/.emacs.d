@@ -20,4 +20,7 @@
 
 (setq tab-width 4)
 
+(when (eq system-type 'darwin)
+  (setq default-directory "/Users/devkin/"))
+
 (provide 'init-default)
