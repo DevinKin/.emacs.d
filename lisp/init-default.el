@@ -21,9 +21,10 @@
 (setq tab-width 4)
 
 (when (eq system-type 'darwin)
-    (setq default-directory "/Users/devkin/")
-    ;; (add-to-list 'exec-path "/usr/local/bin")
-    )
+  (setq default-directory "/Users/devkin/")
+  (setq ns-alternate-modifier 'alt)
+  (setq ns-command-modifier 'meta))
+
 (use-package exec-path-from-shell
   :ensure t
   :config
