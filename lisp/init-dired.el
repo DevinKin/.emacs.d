@@ -28,6 +28,7 @@
 
     :bind
     (("C-x C-n" . dired-sidebar-toggle-sidebar)
+     ("<f3>" . dired-sidebar-toggle-sidebar)
 
      :map
      dired-sidebar-mode-map

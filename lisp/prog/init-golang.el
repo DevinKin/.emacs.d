@@ -16,6 +16,17 @@
   ;; (add-to-list 'lsp-enabled-clients 'gopls)
   (add-hook 'go-mode-hook
 	    (lambda ()
-	      (setq tab-width 4))))
+	      (setq tab-width 4)))
+  :bind
+  (:map go-mode-map
+	("C-c C-r" . devinkin/golang-run)))
+
+
+(defvar devinkin-default-golang-run-command "go run main.go")
+
+(defun devinkin/golang-run ()
+  (interactive)
+  (compile (format "%s" devinkin-default-golang-run-command))
+  (pop-to-buffer "*compilation*"))
 
 (provide 'init-golang)
