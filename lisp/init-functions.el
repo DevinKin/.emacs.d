@@ -36,4 +36,12 @@
              (lambda (&rest args) nil)))
     (apply func args)))
 
+;; image-toggle-annotation forever
+(defun image-toggle-animation-forever ()
+  (interactive)
+  (let ((image-animate-loop t))
+    (image-toggle-animation)))
+
+(define-key image-mode-map (kbd "C-c C-t") 'image-toggle-animation-forever)
+
 (provide 'init-functions)

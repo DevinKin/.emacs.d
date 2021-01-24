@@ -30,6 +30,7 @@
     "eoo" 'eaf-open
     "eob" 'eaf-open-browser
     "eot" 'eaf-open-terminal
+    "ol" 'helm-imenu
     ))
 
 (use-package evil-surround
