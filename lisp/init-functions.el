@@ -42,6 +42,8 @@
   (let ((image-animate-loop t))
     (image-toggle-animation)))
 
-(define-key image-mode-map (kbd "C-c C-t") 'image-toggle-animation-forever)
+(eval-after-load 'image-mode
+  '(define-key image-mode-map (kbd "C-c C-t") 'image-toggle-animation-forever))
+
 
 (provide 'init-functions)
