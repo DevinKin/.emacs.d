@@ -58,4 +58,11 @@
   )
 
 
+(use-package lsp-origami
+  :ensure t
+  :hook
+  ((lsp-after-open-hook . lsp-origami-try-enable)
+   (prog-mode-hook . origami-mode))
+  )
+
 (provide 'init-lsp)

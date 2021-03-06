@@ -31,6 +31,28 @@
     "eob" 'eaf-open-browser
     "eot" 'eaf-open-terminal
     "ol" 'helm-imenu
+
+    ;; code folding using origami 
+    "ho" 'origami-open-node
+    "hao" 'origami-open-all-nodes
+    "hro" 'origami-open-node-recursively
+    "hs" 'origami-show-node
+    "hns" 'origami-show-only-node
+    "hc" 'origami-close-node
+    "hac" 'origami-close-all-nodes
+    "hrc" 'origami-close-node-recursively
+    "hnt" 'origami-toggle-node
+    "hat" 'origami-toggle-all-nodes
+    "hrt" 'origami-recursively-toggle-node
+    "hff" 'origami-forward-fold
+    "hfp" 'origami-previous-fold
+    "hfn" 'origami-next-fold
+    "hft" 'origami-forward-toggle-node
+    "hfs" 'origami-forward-fold-same-level
+    "hbs" 'origami-backward-fold-same-level
+    "hu" 'origami-undo
+    "hrd" 'origami-redo
+    "hrs" 'origami-reset
     ))
 
 (use-package evil-surround
