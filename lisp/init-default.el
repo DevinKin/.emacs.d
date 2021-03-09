@@ -25,6 +25,9 @@
   (setq ns-alternate-modifier 'alt)
   (setq ns-command-modifier 'meta))
 
+;; allow remembering risky variables
+(advice-add 'risky-local-variable-p :override #'ignore)
+
 (use-package exec-path-from-shell
   :ensure t
   :config
