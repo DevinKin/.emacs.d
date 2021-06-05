@@ -1,6 +1,6 @@
 # -*- mode: snippet -*-
-# name: defn
-# key: dfns
+# name: dp
+# key: dp
 # --
 (defn- ${1:func}
   "${2:TODO add docstring}"

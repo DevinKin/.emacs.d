@@ -57,5 +57,7 @@
 (require 'init-csv)
 ;; web-mode
 (require 'init-web)
+;; groovy-mode and gradle-mode for gradle
+(require 'init-groovy)
 
 (provide 'init-config)
