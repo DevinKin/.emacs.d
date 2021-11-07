@@ -48,6 +48,7 @@
 
 
 (use-package yasnippet
+  :ensure t
   :bind
   (:map
    yas-keymap

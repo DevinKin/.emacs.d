@@ -1,6 +1,7 @@
 
 (use-package evil
   :ensure t
+  :init (setq evil-want-keybinding nil)
   :config (evil-mode 1))
 
 (use-package evil-leader
@@ -75,14 +76,11 @@
     ))
 
 ;;; Evil magit
-(use-package evil-magit
+(use-package evil-collection
+  :after evil
   :ensure t
-  :after evil magit
-  :init
-  (setq evil-magit-state 'normal)
-  (setq evil-magit-use-y-for-yank t)
-  ;:config
-  ;(evil-magit-revert)
-  )
+  :config
+  (evil-collection-init))
+  ;; See https://github.com/emacs-evil/evil-collection/issues/60 for more details.)
 
 (provide 'init-evil)
