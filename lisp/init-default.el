@@ -21,16 +21,16 @@
 (setq tab-width 4)
 
 (when (eq system-type 'darwin)
-  (setq default-directory "/Users/devkin/")
+  (setq default-directory "/Users/devin/")
   (setq ns-alternate-modifier 'alt)
   (setq ns-command-modifier 'meta))
 
 ;; allow remembering risky variables
 (advice-add 'risky-local-variable-p :override #'ignore)
 
-(use-package exec-path-from-shell
-  :ensure t
-  :config
-  (exec-path-from-shell-initialize))
+;; (use-package exec-path-from-shell
+;;   :ensure t
+;;   :config
+;;   (exec-path-from-shell-initialize))
 
 (provide 'init-default)

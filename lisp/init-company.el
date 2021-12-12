@@ -35,9 +35,9 @@
   :config (push 'company-lsp company-backends)) ;; add company-lsp as a backend
 
 ;; company-tabnine with ai complete
-(use-package company-tabnine
-  :ensure t
-  :config
-  (add-to-list 'company-backends #'company-tabnine))
+;; (use-package company-tabnine
+;;   :ensure t
+;;   :config
+;;   (add-to-list 'company-backends #'company-tabnine))
 
 (provide 'init-company)
