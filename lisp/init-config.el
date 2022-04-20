@@ -59,5 +59,7 @@
 (require 'init-web)
 ;; groovy-mode and gradle-mode for gradle
 (require 'init-groovy)
+;; rust-mode
+(require 'init-rust)
 
 (provide 'init-config)
