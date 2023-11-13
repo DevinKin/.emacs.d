@@ -1,13 +1,15 @@
 ;;;; This file is used for packages configuration and more
 
+
 ;;; Init Packages
 (package-initialize)
 
 ;;; Mirror
 (require 'package)
-;;; fix Package cl is deprecated
-(require 'cl-lib) ; Common Lisp
 
+;;; Fix Package cl is deprecated
+(require 'cl-lib) ; Common Lisp
+(setq byte-compile-warnings '(cl-functions))
 ;; (setq package-archives '(("gnu" . "http://mirrors.bfsu.edu.cn/elpa/gnu/")
 ;;                          ("melpa" . "http://mirrors.bfsu.edu.cn/elpa/melpa/")))
 (setq package-archives '(("gnu"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")

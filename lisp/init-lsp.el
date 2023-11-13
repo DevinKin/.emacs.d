@@ -32,7 +32,9 @@
 	lsp-diagnostics-provider :none
 	
 	lsp-clojure-custom-server-command '("bash" "-c" "clojure-lsp") ;; Optional: In case `clojure-lsp` is not in your PATH
-	lsp-enable-indentation nil))
+	lsp-enable-indentation nil
+
+	lsp-headerline-breadcrumb-enable nil))
 
 (use-package lsp-ui
   :ensure t
