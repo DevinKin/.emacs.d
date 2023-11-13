@@ -11,7 +11,8 @@
 
 ;; 延迟加载
 (with-eval-after-load 'dired
-  (define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file))
+  (define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file)
+  (add-hook 'dired-mode-hook 'auto-revert-mode))
 
 ;; 分屏拷贝
 (setq dired-dwim-target 1)
