@@ -25,7 +25,8 @@
 
 (use-package helm-tramp
   :ensure t
-  :bind (("C-c s" . helm-tramp))
+  :bind (("C-c s" . helm-tramp)
+	 ("C-c q" . helm-tramp-quit))
   :config
   (progn
     (setq tramp-default-method "ssh")

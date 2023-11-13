@@ -59,6 +59,8 @@
 (require 'init-web)
 ;; groovy-mode and gradle-mode for gradle
 (require 'init-groovy)
+;; rust-mode
+(require 'init-rust)
 ;; init-proxy by blog https://scanbuf.net/post/manual/proxy/
 (require 'init-proxy)
 
