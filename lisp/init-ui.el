@@ -62,7 +62,8 @@
   ;; Global settings (defaults)
   (setq doom-themes-enable-bold t    ; if nil, bold is universally disabled
         doom-themes-enable-italic t) ; if nil, italics is universally disabled
-  (load-theme 'doom-one t)
+  ;; (load-theme 'doom-one t)
+  (load-theme 'doom-acario-dark t)
 
   ;; Enable flashing mode-line on errors
   (doom-themes-visual-bell-config)
@@ -115,7 +116,8 @@
 (custom-set-faces '(hl-line ((t
 			      :extend t
 			      :background "#13151a"
-			      :underline "#65EAB9")))
+			      ;:underline "#65EAB9"
+			      )))
 		  '(magit-section-highlight ((t
 			      :underline nil)))
 		  '(ediff-even-diff-A ((t
