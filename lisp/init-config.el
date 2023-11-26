@@ -63,5 +63,6 @@
 (require 'init-rust)
 ;; init-proxy by blog https://scanbuf.net/post/manual/proxy/
 (require 'init-proxy)
-
+;; ocaml config
+(require 'init-ocaml)
 (provide 'init-config)

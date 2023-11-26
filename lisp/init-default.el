@@ -31,6 +31,8 @@
 (use-package exec-path-from-shell
   :ensure t
   :config
+  (dolist (var '("OPAM_SWITCH_PREFIX" "CAML_LD_LIBRARY_PATH" "OCAML_TOPLEVEL_PATH"))
+    (add-to-list 'exec-path-from-shell-variables var))
   (exec-path-from-shell-initialize))
 
 (provide 'init-default)
