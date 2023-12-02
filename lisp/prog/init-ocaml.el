@@ -37,7 +37,9 @@
   (add-hook 'tuareg-mode-hook #'merlin-mode))
 
 (use-package utop
-  :ensure t)
+  :ensure t
+  :config
+  (add-hook 'tuareg-mode-hook #'utop-minor-mode))
 
 (use-package dune
   :ensure t)
@@ -50,5 +52,11 @@
   (:map
    dune-mode-map
    ("C-c C-f" . 'dune-format-buffer)))
+
+(use-package reason-mode
+  :ensure t
+  :hook (reason-mode-hook . (lambda ()
+			      (add-hook 'before-save-hook 'refmt-before-save)
+			      (merlin-mode))))
 
 (provide 'init-ocaml)

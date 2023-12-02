@@ -13,6 +13,8 @@
 	 ((clojure-mode-hook
 	   clojurec-mode-hook
 	   clojurescript-mode-hook) . lsp)
+	 ((reason-mode-hook
+	   tuareg-mode-hook) . lsp)
 	 )
   :config
   (dolist (m '(clojure-mode
