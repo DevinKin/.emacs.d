@@ -39,4 +39,16 @@
 (use-package utop
   :ensure t)
 
+(use-package dune
+  :ensure t)
+
+(use-package dune-format
+  :ensure t
+  :hook (dune-mode-hook . dune-format-on-save-mode)
+
+  :bind
+  (:map
+   dune-mode-map
+   ("C-c C-f" . 'dune-format-buffer)))
+
 (provide 'init-ocaml)
