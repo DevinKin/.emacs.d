@@ -65,4 +65,7 @@
 (require 'init-proxy)
 ;; ocaml config
 (require 'init-ocaml)
+;; nix config
+(require 'init-nix)
+
 (provide 'init-config)

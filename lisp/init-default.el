@@ -35,4 +35,8 @@
     (add-to-list 'exec-path-from-shell-variables var))
   (exec-path-from-shell-initialize))
 
+
+;; Emergency (magit): Magit requires ‘seq’ >= 2.24,
+(setq package-install-upgrade-built-in t)
+
 (provide 'init-default)
