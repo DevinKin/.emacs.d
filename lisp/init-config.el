@@ -67,5 +67,7 @@
 (require 'init-ocaml)
 ;; nix config
 (require 'init-nix)
+;; treemacs config
+(require 'init-treemacs)
 
 (provide 'init-config)

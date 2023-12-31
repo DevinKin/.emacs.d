@@ -14,9 +14,9 @@
    ("C-c C-o" . 'helm-nixos-options))
   )
 
-(use-package company-nixos-options
-  :ensure t
-  :config
-  (add-to-list 'company-backends 'company-nixos-options))
+;; (use-package company-nixos-options
+;;   :ensure t
+;;   :config
+;;   (add-to-list 'company-backends 'company-nixos-options))
 
 (provide 'init-nix)

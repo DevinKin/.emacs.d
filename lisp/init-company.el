@@ -25,6 +25,7 @@
         ;; @see https://github.com/company-mode/company-mode/issues/146
         company-tooltip-align-annotations t
 	company-global-modes '(not dired-mode dired-sidebar-mode)
+	company-minimum-prefix-length 2
 	)
   (push 'company-capf company-backends)
   )

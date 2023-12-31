@@ -1,4 +1,5 @@
-(defvar default-proxy "127.0.0.1:7890")
+(defvar default-http-proxy "127.0.0.1:20172")
+(defvar default-socks-proxy "127.0.0.1:7890")
 (defvar socks-server)
 (defvar socks-noproxy)
 ;; Network Proxy
@@ -6,15 +7,15 @@
   "Show HTTP/HTTPS proxy."
   (interactive)
   (if url-proxy-services
-      (message "Current HTTP proxy is `%s'" default-proxy)
+      (message "Current HTTP proxy is `%s'" default-http-proxy)
     (message "No HTTP proxy")))
 
 (defun proxy-http-enable ()
   "Enable HTTP/HTTPS proxy."
   (interactive)
   (setq url-proxy-services
-        `(("http" . ,default-proxy)
-          ("https" . ,default-proxy)
+        `(("http" . ,default-http-proxy)
+          ("https" . ,default-http-proxy)
           ("no_proxy" . "^\\(localhost\\|192.168.*\\|10.*\\)")))
   (proxy-http-show))
 
@@ -44,7 +45,7 @@
   "Enable SOCKS proxy."
   (interactive)
   (require 'socks)
-  (let* ((proxy (split-string default-proxy "\\s-*:\\s-*"))
+  (let* ((proxy (split-string default-socks-proxy "\\s-*:\\s-*"))
          (addr (car proxy))
          (port (string-to-number (cadr proxy))))
     (setq url-gateway-method 'socks

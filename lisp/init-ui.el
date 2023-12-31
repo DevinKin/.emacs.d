@@ -19,7 +19,7 @@
 ;; font configuration
 (setq devinkin/font-name "Source Code Pro"
       devinkin/font-style "Regular"
-      devinkin/font-size 20)
+      devinkin/font-size 24)
 (if (fontp (font-spec
             :name devinkin/font-name
             :style devinkin/font-style
