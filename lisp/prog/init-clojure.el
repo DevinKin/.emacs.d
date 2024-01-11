@@ -138,4 +138,7 @@
             (delete-char 2)
           (insert "#_")))))))
 
+(use-package clj-deps-new
+  :ensure t)
+
 (provide 'init-clojure)
