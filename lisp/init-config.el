@@ -69,5 +69,7 @@
 (require 'init-nix)
 ;; treemacs config
 (require 'init-treemacs)
+;; sql config
+(require 'init-sql)
 
 (provide 'init-config)
